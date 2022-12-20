@@ -1,0 +1,15 @@
+/* common */
+body {
+  background-color: #333;
+}
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 96px;
+}
+h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
