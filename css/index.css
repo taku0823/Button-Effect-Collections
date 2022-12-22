@@ -15,23 +15,26 @@ h1 {
   text-align: center;
 }
 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 96px;
   font-size: 24px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
 }
 .list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 40px;
+  grid-template-columns: repeat(4, 240px);
+  gap: 40px 80px;
   margin-top: 48px;
 }
 
 /* Button01 */
 .button01 {
   position: relative;
-  display: inline-block;
-  color: #1670f0;
-  padding: 32px 64px;
+  color: #39c20b;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
@@ -52,7 +55,7 @@ a {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, #0c002b, #1779ff);
+  background: linear-gradient(to right, #0c002b, #39c20b);
   animation: button01-01 1s linear infinite;
 }
 .button01__line:nth-child(2) {
@@ -60,7 +63,7 @@ a {
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(to bottom, #0c002b, #1779ff);
+  background: linear-gradient(to bottom, #0c002b, #39c20b);
   animation: button01-02 1s linear infinite;
   animation-delay: 0.5s;
 }
@@ -69,7 +72,7 @@ a {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to left, #0c002b, #1779ff);
+  background: linear-gradient(to left, #0c002b, #39c20b);
   animation: button01-03 1s linear infinite;
 }
 .button01__line:nth-child(4) {
@@ -77,9 +80,12 @@ a {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(to top, #0c002b, #1779ff);
+  background: linear-gradient(to top, #0c002b, #39c20b);
   animation: button01-04 1s linear infinite;
   animation-delay: 0.5s;
+}
+.button01:hover .button01__line {
+  animation-direction: reverse;
 }
 @keyframes button01-01 {
   0% {
@@ -111,5 +117,58 @@ a {
   }
   100% {
     transform: translateY(-100%);
+  }
+}
+
+/* Button02 */
+.button02 {
+  position: relative;
+  padding: 32px 64px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.button02__text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.button02__liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 240px;
+  height: 240px;
+  background: #4973ff;
+  transition: 0.5s;
+}
+.button02:hover .button02__liquid {
+  top: -140px;
+}
+.button02__liquid::before,
+.button02__liquid::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+.button02__liquid::before {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: button02 5s linear infinite;
+}
+.button02__liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: button02 10s linear infinite;
+}
+@keyframes button02 {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
   }
 }
