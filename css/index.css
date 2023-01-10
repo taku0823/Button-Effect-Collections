@@ -369,32 +369,3 @@ a {
   transform: scale(0);
   transform-origin: bottom right;
 }
-
-/* Button07 */
-.button07 {
-  position: relative;
-  color: #fff;
-  background: linear-gradient(90deg, #3603ff, #a41ee9);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
-  text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
-  transition: 0.5s;
-  transform: rotateY(-20deg) perspective(800px);
-  overflow: hidden;
-}
-.button07:hover {
-  text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.2);
-  transform: rotateY(20deg) perspective(800px);
-}
-.button07::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, #fff, transparent);
-  transition: 0.5s;
-}
-.button07:hover:before {
-  left: 100%;
-}
