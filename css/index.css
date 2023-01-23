@@ -454,3 +454,24 @@ a {
   height: 100%;
   transform: translateY(-100%);
 }
+
+/* Button08 */
+.button08 {
+  position: relative;
+  color: #fff;
+  transition: 0.5s;
+}
+.button08:hover {
+  background: #ec0b36 url(../img/pixel.png);
+  background-size: 240px;
+  transition-delay: 0.8s;
+  animation: button08 0.8s steps(8) forwards;
+}
+@keyframes button08 {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -480px;
+  }
+}
