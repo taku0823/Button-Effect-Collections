@@ -462,7 +462,7 @@ a {
   transition: 0.5s;
 }
 .button08:hover {
-  background: #ec0b36 url(../img/pixel.png);
+  background: #ec0b36 url(../img/button08.png);
   background-size: 240px;
   transition-delay: 0.8s;
   animation: button08 0.8s steps(8) forwards;
@@ -474,4 +474,28 @@ a {
   100% {
     background-position-y: -480px;
   }
+}
+
+/* Button09 */
+.button09 {
+  position: relative;
+  color: #fff;
+  transition: 0.5s;
+}
+.button09::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 60px;
+  background: url(../img/button09.png);
+  background-size: cover;
+  transform-origin: left;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  z-index: -1;
+}
+.button09:hover::before {
+  width: 240px;
 }
