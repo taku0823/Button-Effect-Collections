@@ -35,6 +35,18 @@ const buttonAnimation10 = () => {
   });
 };
 
+const buttonAnimation11 = () => {
+  const button11 = document.querySelector('.button11');
+
+  button11.addEventListener('mouseover', () => {
+    button11.classList.add('is-animate');
+  });
+  button11.addEventListener('mouseleave', () => {
+    button11.classList.remove('is-animate');
+  });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   buttonAnimation10();
+  buttonAnimation11();
 });
